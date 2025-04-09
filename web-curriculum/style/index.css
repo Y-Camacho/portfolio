@@ -1,0 +1,56 @@
+:root {
+    --main-color: #cdcdcd;
+    --header-h: 70px;
+}
+
+html {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: -10;
+    height: var(--header-h);
+}
+
+header > nav {
+    display: flex;
+}
+
+.nav-yo {
+    display: flex;
+}
+
+.yo-img, .yo-img > img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.snap-container {
+    height: calc(100vh - var(--header-h));
+    width: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    display: grid;
+    grid-auto-rows: calc(100vh - var(--header-h));;
+}
+
+.snap-container > * {
+    scroll-snap-align: start;
+}
