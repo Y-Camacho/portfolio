@@ -17,7 +17,7 @@ html {
 *::before {
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     box-sizing: inherit;
     scroll-behavior: smooth;
@@ -75,22 +75,6 @@ header > nav {
     top: 100px;
     right: -50px;
     transition: 0.5s;
-}
-  
-@keyframes slidein {
-
-from {
-    top: 0;
-}
-
-to {
-    top: 50px;
-    transform: scale(2);
-    
-}
-
-
-
 }
 
 /* Links a la derecha */
@@ -151,8 +135,14 @@ section {
 
 .about .title {
     text-align: center;
+    margin: 0 0 10px;
+    font-weight: 100;
 }
 
+.about .title-principal{
+    font-size: 60px;
+    font-weight: 500;
+}
 
 .btn-social {
     background-color: var(--primary-color);
@@ -161,6 +151,7 @@ section {
     border-radius: 0.5rem;
     transition: 0.5s;
 }
+
 
 .btn-social:hover {
     background-color: var(--obs-primary-color);
@@ -172,7 +163,21 @@ section {
     column-gap: 8px;
     color: var(--main-color);
     text-decoration: none;
+    align-items: center;
 }
+
+.btn-social-project{
+    background-color: var(--main-color);
+}
+
+.btn-social-project > a {
+    color: var(--primary-color);
+}
+.btn-social-project:hover > a{
+    color: var(--main-color);
+}
+
+
 
 /* .snap-container {
     height: calc(100vh - var(--header-h));
