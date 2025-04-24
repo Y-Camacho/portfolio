@@ -4,6 +4,10 @@
     --obs-primary-color: #76150F;
     --secondary-color: #3C3C3C;
     --header-h: 80px;
+    --width-max: 1000px;
+
+    --gray: #A0A0A0;
+    --gray-dark: #606060;
 }
 
 html {
@@ -37,11 +41,16 @@ header {
     height: var(--header-h);
     padding: 0.5rem;
     background-color: var(--main-color);
+    z-index: 998;
+}
+
+header * {
+    z-index: 999;
 }
 
 header > nav {
     display: flex;
-    max-width: 1000px;
+    max-width: var(--width-max);
     margin: 0 auto;
     justify-content: space-between;
     
@@ -106,9 +115,11 @@ header > nav {
 /* Estilos separadores */
 
 .separate-2 > *, .separate-1 > * {
+    padding: 1rem;
     padding-top: var(--header-h);
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: var(--width-max);
+    min-height: calc(100vh);
 }
 
 .separate-2{
@@ -119,11 +130,6 @@ header > nav {
 /* Estilos secciones */
 
 section {
-    min-height: calc(100vh);
-}
- 
-.article {
-    
     min-height: calc(100vh);
 }
 
@@ -177,6 +183,129 @@ section {
     color: var(--main-color);
 }
 
+/* Estilos proyectos */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 1000px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-item{
+    border: thin solid var(--secondary-color);
+    border-radius: 0.3rem;
+}
+
+
+/* Estilos hamburguesa */
+
+.hamburger {
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    padding: 1rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+@media (max-width: 650px){
+    .nav-links{
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Experiencia SECTION */
+
+.experienceSection {
+    margin: 50px auto;
+  }
+  
+  .experienceSection h2 {
+    color: var(--whiteColor);
+    font-size: var(--SectionTitleSize);
+    margin-bottom: 30px;
+  }
+  
+  .experienceSection h2 svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+  /* ul */
+  .experienceList {
+    list-style: none;
+    border-inline-start: 1px solid white;
+    position: relative;
+  }
+  
+  .experienceItemList {
+    padding-left: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .experienceItemList time {
+    color: rgba(213, 213, 213, 0.639);
+  }
+  
+  .experienceItemList h3 {
+    color: rgb(82, 152, 196);
+    font-size: var(--ExperienciaTitleSize);
+    text-wrap: pretty;
+  }
+  
+  .experienceItemList p {
+    color: white;
+    margin: 0 0 30px 0;
+    font-size: var(--ExperienceParagraphSixe);
+  }
+  
+  .experienceItemList a {
+    background-color: var(--whiteColor);
+    padding: 10px 25px;
+    border-radius: 10px;
+  
+    font-weight: 700;
+    color: black;
+  
+    width: max-content;
+  
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .experienceItemList a:hover {
+    color: rgb(82, 152, 196);
+  }
+  
+  
+  .decorativeCircleList {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+  
+    left: -5px;
+    margin-top: 7px;
+  }
 
 
 /* .snap-container {
