@@ -8,6 +8,10 @@
 
     --gray: #A0A0A0;
     --gray-dark: #606060;
+
+    --title-size: clamp(1.9rem, 6vw, 2.3rem);
+    --subtitle-size: clamp(1.3rem, 5vw, 1.9rem);
+    --paragraph-size: clamp(1rem, 4vw, 1.3rem);
 }
 
 html {
@@ -27,10 +31,21 @@ html {
     scroll-behavior: smooth;
 }
 
-
-body {
-    
+body {    
     margin: 0;
+}
+
+p {
+    color: white;
+    margin: 0 0 30px 0;
+    font-size: var(--paragraph-size);
+}
+
+h2 {
+    margin: 0 0 30px;
+    color: var(--main-color);
+    font-size: var(--title-size);
+    margin-bottom: 30px;
 }
 
 /* ESTILOS DEL HEADER */
@@ -127,11 +142,7 @@ header > nav {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, .08), transparent);
 }
 
-/* Estilos secciones */
-
-section {
-    min-height: calc(100vh);
-}
+/* Estilos About me */
 
 .about {
     display: flex;
@@ -142,7 +153,7 @@ section {
 .about .title {
     text-align: center;
     margin: 0 0 10px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .about .title-principal{
@@ -233,79 +244,68 @@ section {
 
 /* Experiencia SECTION */
 
-.experienceSection {
-    margin: 50px auto;
-  }
-  
-  .experienceSection h2 {
-    color: var(--whiteColor);
-    font-size: var(--SectionTitleSize);
-    margin-bottom: 30px;
-  }
-  
-  .experienceSection h2 svg {
-    width: 20px;
-    height: 20px;
-  }
-  
-  
-  /* ul */
-  .experienceList {
-    list-style: none;
-    border-inline-start: 1px solid white;
-    position: relative;
-  }
-  
-  .experienceItemList {
-    padding-left: 20px;
-    padding-bottom: 40px;
-  }
-  
-  .experienceItemList time {
-    color: rgba(213, 213, 213, 0.639);
-  }
-  
-  .experienceItemList h3 {
-    color: rgb(82, 152, 196);
-    font-size: var(--ExperienciaTitleSize);
-    text-wrap: pretty;
-  }
-  
-  .experienceItemList p {
-    color: white;
-    margin: 0 0 30px 0;
-    font-size: var(--ExperienceParagraphSixe);
-  }
-  
-  .experienceItemList a {
-    background-color: var(--whiteColor);
-    padding: 10px 25px;
-    border-radius: 10px;
-  
-    font-weight: 700;
-    color: black;
-  
-    width: max-content;
-  
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .experienceItemList a:hover {
-    color: rgb(82, 152, 196);
-  }
-  
-  
-  .decorativeCircleList {
-    height: 10px;
-    width: 10px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-  
-    left: -5px;
-    margin-top: 7px;
-  }
+/* ul */
+.experienceList {
+list-style: none;
+border-inline-start: 1px solid white;
+position: relative;
+}
+
+.experienceItemList {
+padding-left: 20px;
+padding-bottom: 40px;
+}
+
+.experienceItemList time {
+color: rgba(213, 213, 213, 0.639);
+}
+
+.experienceItemList h3 {
+color: var(--secondary-color);
+font-size: var(--subtitle-size);
+text-wrap: pretty;
+}
+
+/* .experienceItemList p {
+color: white;
+margin: 0 0 30px 0;
+font-size: var(--paragraph-size);
+} */
+
+.experienceItemList a {
+background-color: var(--main-color);
+padding: 10px 25px;
+border-radius: 10px;
+
+font-weight: 700;
+color: black;
+
+width: max-content;
+
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.experienceItemList a:hover {
+color: rgb(82, 152, 196);
+}
+
+.decorativeCircleList {
+height: 10px;
+width: 10px;
+background-color: white;
+border-radius: 50%;
+position: absolute;
+
+left: -5px;
+margin-top: 7px;
+}
+
+
+footer {
+    background-color: #3C3C3C;
+    height: 100px;
+}
 
 
 /* .snap-container {
