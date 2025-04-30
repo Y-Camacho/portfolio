@@ -4,6 +4,7 @@
     --obs-primary-color: #76150F;
     --secondary-color: #3C3C3C;
     --header-h: 80px;
+    --negative-header-h: -80px;
     --width-max: 1000px;
 
     --gray: #A0A0A0;
@@ -46,6 +47,7 @@ h2 {
     color: var(--main-color);
     font-size: var(--title-size);
     margin-bottom: 30px;
+    text-shadow: var(--obs-primary-color) 4px 4px ;
 }
 
 /* ESTILOS DEL HEADER */
@@ -56,11 +58,11 @@ header {
     height: var(--header-h);
     padding: 0.5rem;
     background-color: var(--main-color);
-    z-index: 998;
+    z-index: 980;
 }
 
 header * {
-    z-index: 999;
+    z-index: 990;
 }
 
 header > nav {
@@ -68,7 +70,7 @@ header > nav {
     max-width: var(--width-max);
     margin: 0 auto;
     justify-content: space-between;
-    
+    align-items: center;
 }
 /* Imagen y nombre */
 .nav-yo {
@@ -160,6 +162,10 @@ header > nav {
     font-weight: 200;
 }
 
+.about .title-frase{
+    color: var(--secondary-color);
+}
+
 .about .title-principal{
     font-size: 60px;
     font-weight: 500;
@@ -218,13 +224,18 @@ header > nav {
 }
 
 
+
+
 /* Estilos hamburguesa */
 
 .hamburger {
-    width: fit-content;
-    height: fit-content;
+    width: 40px;
+    height: 40px;
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 0.5rem;
+    transition: .2s;
 }
 
 .hamburger:hover {
@@ -234,20 +245,41 @@ header > nav {
 
 .bar {
     display: block;
-    width: 25px;
+    width: 100%;
     height: 3px;
-    margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #101010;
 }
+/* Eslilos del panel (el menu cuando está la ambuguesa) 
+    Aprivecho la misma meida query
+*/
 
 @media (max-width: 650px){
     .nav-links{
-        display: none;
+        /* display: none; */
     }
+
+    .panel {
+        position: fixed;
+        background-color: var(--main-color);
+        width: 100%;
+        height: var(--header-h);
+        z-index: 999;
+
+        top: 0;
+        transform: translate(0, -100%);
+    }
+
+    .panel-active{
+        transform: translate(0, 0);
+        transition: all 0.3s ease;
+        visibility: visible;
+    }
+
     .hamburger {
-        display: block;
+        display: flex;
+        transition: .2s
     }
 }
 
