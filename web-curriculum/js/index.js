@@ -3,6 +3,8 @@ import {addActiveClass, desplaceTo, removerClasesActivas} from './functions.js'
 const d = document,
       w = window;
 
+const $panel = d.querySelector(".panel");
+
 // Para que siempre comience la página en el about me
 w.location.hash = "#about"
 // ---
@@ -25,7 +27,7 @@ d.addEventListener("keydown", (e) => {
 })
 // ---
 
-// Dependiendo de la techa, desplazar hacia arriba o hacia abajo
+// Dependiendo de la tecla, desplazar hacia arriba o hacia abajo
 d.addEventListener("keyup", (e) => {
     if(e.key === "ArrowUp"){
         e.preventDefault();
@@ -36,3 +38,15 @@ d.addEventListener("keyup", (e) => {
     }
 });
 // ---
+
+// Asigna la clase active del menú para cuando la amburguesa está visible
+d.addEventListener("click", (e) => {
+    if(e.target.matches(".hamburger") || e.target.matches(".hamburger *")){
+        $panel.classList.toggle("panel-active");
+    }
+    
+    if(e.target.matches(".panel *")){
+        $panel.classList.remove("panel-active");
+    }
+})
+// --
