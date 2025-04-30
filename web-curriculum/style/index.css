@@ -127,10 +127,8 @@ header > nav {
 
 .btn-link-active {
     text-decoration: underline;
-}
-
-.btn-link:hover {
-    text-decoration: underline;
+    text-decoration-color: var(--gray);
+    text-underline-offset: 4px;
 }
 
 /* Estilos separadores */
