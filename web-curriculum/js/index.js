@@ -27,7 +27,7 @@ d.addEventListener("keydown", (e) => {
 })
 // ---
 
-// Dependiendo de la techa, desplazar hacia arriba o hacia abajo
+// Dependiendo de la tecla, desplazar hacia arriba o hacia abajo
 d.addEventListener("keyup", (e) => {
     if(e.key === "ArrowUp"){
         e.preventDefault();
@@ -39,7 +39,7 @@ d.addEventListener("keyup", (e) => {
 });
 // ---
 
-// Asina la clase active del menú para cuando la amburguesa está visible
+// Asigna la clase active del menú para cuando la amburguesa está visible
 d.addEventListener("click", (e) => {
     if(e.target.matches(".hamburger") || e.target.matches(".hamburger *")){
         $panel.classList.toggle("panel-active");

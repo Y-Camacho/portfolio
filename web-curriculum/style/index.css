@@ -179,7 +179,6 @@ header > nav {
     transition: 0.5s;
 }
 
-
 .btn-social:hover {
     background-color: var(--obs-primary-color);
     transition: 0.5s;
@@ -223,9 +222,6 @@ header > nav {
     border-radius: 0.3rem;
 }
 
-
-
-
 /* Estilos hamburguesa */
 
 .hamburger {
@@ -256,10 +252,6 @@ header > nav {
 */
 
 @media (max-width: 650px){
-    .nav-links{
-        /* display: none; */
-    }
-
     .panel {
         position: fixed;
         background-color: var(--main-color);
@@ -287,77 +279,56 @@ header > nav {
 
 /* ul */
 .experienceList {
-list-style: none;
-border-inline-start: 1px solid white;
-position: relative;
+    list-style: none;
+    border-inline-start: 1px solid white;
+    position: relative;
 }
 
 .experienceItemList {
-padding-left: 20px;
-padding-bottom: 40px;
+    padding-left: 20px;
+    padding-bottom: 40px;
 }
 
 .experienceItemList time {
-color: rgba(213, 213, 213, 0.639);
+color: rgba(213, 213, 213, 0.639);  
 }
 
 .experienceItemList h3 {
-color: var(--secondary-color);
-font-size: var(--subtitle-size);
-text-wrap: pretty;
+    color: var(--secondary-color);
+    font-size: var(--subtitle-size);
+    text-wrap: pretty;
 }
-
-/* .experienceItemList p {
-color: white;
-margin: 0 0 30px 0;
-font-size: var(--paragraph-size);
-} */
 
 .experienceItemList a {
-background-color: var(--main-color);
-padding: 10px 25px;
-border-radius: 10px;
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    border-radius: 10px;
 
-font-weight: 700;
-color: black;
+    font-weight: 700;
+    color: black;
 
-width: max-content;
+    width: max-content;
 
-display: flex;
-align-items: center;
-gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 .experienceItemList a:hover {
-color: rgb(82, 152, 196);
+    color: rgb(82, 152, 196);
 }
 
 .decorativeCircleList {
-height: 10px;
-width: 10px;
-background-color: white;
-border-radius: 50%;
-position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
 
-left: -5px;
-margin-top: 7px;
+    left: -5px;
+    margin-top: 7px;
 }
-
 
 footer {
     background-color: #3C3C3C;
     height: 100px;
 }
-
-
-/* .snap-container {
-    height: calc(100vh - var(--header-h));
-    width: 100%;
-    overflow: auto;
-    scroll-snap-type: y mandatory;
-    display: grid;
-    grid-auto-rows: calc(100vh - var(--header-h));;
-}
-
-.snap-container > * {
-    scroll-snap-align: start;
-} */

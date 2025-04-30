@@ -53,10 +53,10 @@ export function addActiveClass() {
     });
 }
 
-// Elimina la calse active a todos los anchorTags del menu ne navegación.
+// Elimina la clase active a todos los anchorTags del menu ne navegación.
 export const removerClasesActivas = () => {
     btnLinks.forEach((boton) => {
         boton.classList.remove("btn-link-active");
     });
 }
-
+// ---
