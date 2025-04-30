@@ -1,31 +1,38 @@
+import {addActiveClass, desplaceTo, removerClasesActivas} from './functions.js'
+
 const d = document,
-      $projectsContainer = d.querySelector(".projects-container"),
-      $template = d.querySelector(".template").content,
-      $fragment = d.createDocumentFragment();
+      w = window;
 
-const GITHUB_TOKEN = 'PRIVATE_TOKEN';
+// Para que siempre comience la página en el about me
+w.location.hash = "#about"
+// ---
 
-class Project {
-    banner;
-    repositoryName;
-    description;
-    tegnologies;
-    repositoryUrl;
-}
+// Controles para la que la clase active del menú esté con respecto al hash de la URL
+w.addEventListener("hashchange", (e) => {
+    removerClasesActivas();
+    addActiveClass();
+});
+// ---
 
-const projects = (async() => {
-    try {
-        let headers = {
-            headers: {
-            authorization: `token ${GITHUB_TOKEN}`,
-            }
-        }
-        let respGithub = await fetch("https://api.github.com/user/repos", headers)
-        let jsonProyects = await respGithub.json();
-
-        console.log(jsonProyects)
-    } catch (error) {
-        console.log(error)
+// Elimino cualquier evento programado para estas teclas
+// Me sirve para evitar el scroll por defecto que tienen
+d.addEventListener("keydown", (e) => {
+    if(e.key === "ArrowUp"){
+        e.preventDefault();
+    } else if(e.key === "ArrowDown"){
+        e.preventDefault();
     }
-})()
+})
+// ---
 
+// Dependiendo de la techa, desplazar hacia arriba o hacia abajo
+d.addEventListener("keyup", (e) => {
+    if(e.key === "ArrowUp"){
+        e.preventDefault();
+        desplaceTo(-1);
+    } else if(e.key === "ArrowDown"){
+        e.preventDefault();
+        desplaceTo(1);
+    }
+});
+// ---

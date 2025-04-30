@@ -123,6 +123,10 @@ header > nav {
     color: var(--secondary-color);
 }
 
+.btn-link-active {
+    text-decoration: underline;
+}
+
 .btn-link:hover {
     text-decoration: underline;
 }
@@ -220,7 +224,12 @@ header > nav {
     width: fit-content;
     height: fit-content;
     display: none;
-    padding: 1rem;
+    padding: 0.5rem;
+}
+
+.hamburger:hover {
+    border-radius: 50%;
+    background-color: #c7c7c7;
 }
 
 .bar {
