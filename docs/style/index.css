@@ -1,7 +1,7 @@
 :root {
     --main-color: #F0F0F0;
     --primary-color: #E7473C;
-    --obs-primary-color: #76150F;
+    --obs-primary-color: rgb(118, 21, 15);
     --secondary-color: #3C3C3C;
     --header-h: 80px;
     --negative-header-h: -80px;
@@ -146,12 +146,45 @@ header > nav {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, .08), transparent);
 }
 
+/* Estilos de los badges */
+
+.badge {
+    padding: .1rem .5rem;
+    font-size: 14px;
+    border-radius: 1rem;
+    border: solid thin;
+}
+
+.badge1 {
+    border-color: var(--obs-primary-color);
+    color: var(--obs-primary-color);
+}
+
+.badge2 {
+    background-color: rgba(118,21,15,0.3);
+    border-color: var(--obs-primary-color);
+    color: var(--main-color);
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.badge-container-center{
+    justify-content: center;
+}
 /* Estilos About me */
 
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.about > * {
+    margin-bottom: 1rem;
 }
 
 .about .title {
@@ -220,6 +253,12 @@ header > nav {
     border-radius: 0.3rem;
 }
 
+.project-title {
+    color: var(--secondary-color);
+    font-size: var(--subtitle-size);
+    margin: 0;
+}
+
 /* Estilos hamburguesa */
 
 .hamburger {
@@ -246,7 +285,7 @@ header > nav {
     background-color: #101010;
 }
 /* Eslilos del panel (el menu cuando está la ambuguesa) 
-    Aprivecho la misma meida query
+    Aprovecho la misma meida query
 */
 
 @media (max-width: 650px){
@@ -310,9 +349,6 @@ color: rgba(213, 213, 213, 0.639);
     display: flex;
     align-items: center;
     gap: 5px;
-}
-.experienceItemList a:hover {
-    color: rgb(82, 152, 196);
 }
 
 .decorativeCircleList {
