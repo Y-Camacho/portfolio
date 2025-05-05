@@ -92,7 +92,7 @@ header > nav {
 }
 
 .yo-img {
-    background-image: url(/web-curriculum/img/pattern.svg);
+    background-image: url("../img/pattern.svg");
 }
 
 .yo-img:hover > img{
