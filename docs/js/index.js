@@ -39,20 +39,24 @@ d.addEventListener("keyup", (e) => {
 });
 // ---
 
-// Asigna la clase active del menú para cuando la amburguesa está visible
+// Programación del evento 'click'
 d.addEventListener("click", (e) => {
+    // Al dar click a la hamburgusa se muestra el menú
     if(e.target.matches(".hamburger") || e.target.matches(".hamburger *")){
         $panel.classList.toggle("panel-active");
-    }
-    
+    } // Al dar sobre una opcion del menú este se oculta
     if(e.target.matches(".panel *")){
         $panel.classList.remove("panel-active");
     }
+    // ---
 
+    // Si el clic es en los controles touch, dependiendo del que 
+    // lanzó el evnto, nos desplazamos hacia arria o abajo
     if(e.target.matches(".btn-up")){
         desplaceTo(-1);
     } else if(e.target.matches(".btn-down")){
         desplaceTo(1);
     }
+    // ---
 })
-// --
+// ---

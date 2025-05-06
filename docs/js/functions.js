@@ -27,7 +27,7 @@ function getNumPosition() {
     return numPosition;
 }
 
-// SE encarga de cambiar hash de la URL tomando en cuenta la posisión en 
+// Se encarga de cambiar hash de la URL tomando en cuenta la posisión en 
 // que nos encontramos y hacia dónde queremos ir.
 export function desplaceTo(comando) {
     let postActual = getNumPosition()
@@ -59,4 +59,3 @@ export const removerClasesActivas = () => {
         boton.classList.remove("btn-link-active");
     });
 }
-// ---
