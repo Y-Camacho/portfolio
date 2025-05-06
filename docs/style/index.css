@@ -1,7 +1,7 @@
 :root {
     --main-color: #F0F0F0;
     --primary-color: #E7473C;
-    --obs-primary-color: rgb(118, 21, 15);
+    --obs-primary-color: #76150f;
     --secondary-color: #3C3C3C;
     --header-h: 80px;
     --negative-header-h: -80px;
@@ -82,6 +82,10 @@ header > nav {
 .yo-info {
     display: flex;
     flex-direction: column;
+}
+
+.yo-info * {
+    color: var(--secondary-color);
 }
 
 .yo-img, .yo-img > img{
@@ -200,6 +204,7 @@ header > nav {
 .about .title-principal{
     font-size: 60px;
     font-weight: 500;
+    color: var(--secondary-color);
 }
 
 .btn-social {
@@ -249,13 +254,23 @@ header > nav {
 }
 
 .project-item{
-    border: thin solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border: thin solid var(--obs-primary-color);
     border-radius: 0.3rem;
+    box-shadow: var(--obs-primary-color) 4px 4px ;;
+}
+
+.project-info > * {
+    margin-top: 1rem;
 }
 
 .project-title {
     color: var(--secondary-color);
     font-size: var(--subtitle-size);
+    margin-bottom: 1rem;
     margin: 0;
 }
 
@@ -284,6 +299,44 @@ header > nav {
     transition: all 0.3s ease-in-out;
     background-color: #101010;
 }
+
+/* Estislos de los botones touch */
+
+.controls, .controls * {
+    display: none;
+}
+
+.controls {
+    position: fixed;
+    display: grid;
+    gap: 10px;
+    bottom: 3rem;
+    right: 1rem;
+}
+
+.btn-up {
+    background-image: url("../img/arrow-up.svg");
+}
+
+.btn-down {
+    background-image: url("../img/arrow-down.svg");
+}
+
+.touch-btn {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: var(--secondary-color);
+    transition: .3s;
+}
+
+.touch-btn:hover {
+    transition: .3s;
+    background-color: var(--obs-primary-color);
+}
+
 /* Eslilos del panel (el menu cuando está la ambuguesa) 
     Aprovecho la misma meida query
 */
@@ -309,6 +362,17 @@ header > nav {
     .hamburger {
         display: flex;
         transition: .2s
+    }
+
+    .about .title-frase {
+        text-align: start;
+    }
+
+    .controls {
+        display: grid;
+    }
+    .controls * {
+        display: block;
     }
 }
 
@@ -366,3 +430,4 @@ footer {
     background-color: #3C3C3C;
     height: 100px;
 }
+

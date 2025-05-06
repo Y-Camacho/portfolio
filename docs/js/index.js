@@ -48,5 +48,11 @@ d.addEventListener("click", (e) => {
     if(e.target.matches(".panel *")){
         $panel.classList.remove("panel-active");
     }
+
+    if(e.target.matches(".btn-up")){
+        desplaceTo(-1);
+    } else if(e.target.matches(".btn-down")){
+        desplaceTo(1);
+    }
 })
 // --
