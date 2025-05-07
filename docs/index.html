@@ -23,7 +23,6 @@
                         <span class="info-okupa">Desarrollador web</span>
                     </div>
                 </div>
-
                 <div class="nav-links panel">
                     <button>
                         <a class="btn-link btn-link-active" href="#about">Sobre mí</a>
@@ -33,6 +32,9 @@
                     </button>
                     <button>
                         <a class="btn-link" href="#experience">Experiencia</a>
+                    </button>
+                    <button>
+                        <a class="btn-link" href="#contacte">Contáctame</a>
                     </button>
                 </div>
                 <div class="hamburger">
@@ -228,8 +230,20 @@
                     </ul>
                 </article>
             </div>
-
-            <footer>
+            <footer id="contacte" class="article">
+                <form action="https://formsubmit.co/yosarca@gmail.com" class="contact" method="POST">
+                    <h2>Contáctame</h2>
+                    <label for="name">
+                        <input type="text" name="name" id="name" placeholder="Nombre:" required>
+                    </label>
+                    <label for="email">
+                        <input type="email" name="email" id="email" placeholder="Email:" required>
+                    </label>
+                    <label for="message">
+                        <textarea name="message" id="message" placeholder="Mensaje:" required></textarea>
+                    </label>
+                    <button type="submit">Enviar</button>
+               </form>
             </footer>
         </section>
     </main>

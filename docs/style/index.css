@@ -260,7 +260,7 @@ header > nav {
     padding: 1rem;
     border: thin solid var(--obs-primary-color);
     border-radius: 0.3rem;
-    box-shadow: var(--obs-primary-color) 4px 4px ;;
+    box-shadow: var(--obs-primary-color) 4px 4px ;
 }
 
 .project-info > * {
@@ -428,6 +428,53 @@ color: rgba(213, 213, 213, 0.639);
 
 footer {
     background-color: #3C3C3C;
+    height: auto;
+    padding: 1rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+    gap: 10px;
+}
+
+.contact *:not(h2) {
+    width: 100%;
+    border-radius: .3rem;
+    border: none;
+    background-color: var(--main-color);
+}
+
+.contact input,
+.contact textarea {
+    padding: .5rem .2rem;
+}
+
+.contact textarea {
     height: 100px;
 }
 
+.contact button {
+    padding: .7rem .2rem;
+    font-weight: bold;
+    color: #3C3C3C;
+    transition: .3s;
+}
+
+.contact:hover button {
+    box-shadow: var(--obs-primary-color) 4px 4px ;
+}
+
+.contact button:hover {
+    background-color: #76150f;
+    color: var(--main-color);
+    box-shadow: var(--gray) 4px 4px ;
+}
+
+@media (max-width: 650px){
+    .contact {
+        width: 100%;
+    }
+}
